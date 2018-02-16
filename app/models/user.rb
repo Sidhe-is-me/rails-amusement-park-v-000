@@ -9,5 +9,9 @@ def mood
   (self.nausea > self.happiness) ? "sad" : "happy"
 end
 
+def num_of_rides
+  self.attractions.count
+end
+
 
 end

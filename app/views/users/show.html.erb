@@ -1,4 +1,22 @@
+<p id="notice"><%= notice %></p>
+
+<% if @message %>
+  <div class="center alert">
+    <p><%= @message %></p>
+  </div>
+<% end %>
+
+<% if @user.admin %>
+    <p><strong>ADMIN</strong></p>
+  <% end %>
+
 Name:<%= @user.name  %>
 Mood: <%= @user.mood  %>
 Tickets: <%= @user.tickets  %>
 Height: <%= @user.height  %>
+
+<p><%= link_to 'Edit', edit_user_path(@user) %></p>
+
+ <li><%= link_to "Log Out", signout_path, method: :delete %></li>
+
+ <a href="/attractions">See attractions</a>
